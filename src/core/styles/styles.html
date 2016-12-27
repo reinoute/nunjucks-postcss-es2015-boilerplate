@@ -1,0 +1,184 @@
+{% extends "../../core/template/template.html" %}
+
+{% block content %}
+<style>
+    .styles {
+        max-width: 30em;
+        margin: 0 auto;
+        padding: 1em;
+    }
+
+    h1, h2, h3 {
+        color: #8e5858;
+    }
+
+    section {
+        margin-bottom: 2em;
+    }
+</style>
+<section class="styles">
+    <h1>Style guide</h1>
+    <section id="table-of-contents">
+        <h2>Table of Contents</h2>
+        <ul>
+            <li><a href="#typography">Typography</a></li>
+            <li><a href="#buttons-links">Buttons and Links</a></li>
+            <li><a href="#lists">Lists</a></li>
+            <li><a href="#forms">Forms</a></li>
+        </ul>
+    </section>
+    <section id="typography">
+        <h2>Typography</h2>
+        <p class="h1">Heading 1 style</p>
+        <p class="h2">Heading 2 style</p>
+        <p class="h3">Heading 3 style</p>
+        <p class="h4">Heading 4 style</p>
+        <p class="h5">Heading 5 style</p>
+        <p class="h6">Heading 6 style</p>
+        <br>
+        <p><b>B element - For a heavier font-weight.</b></p>
+        <p><strong>Strong or B element - For emphasizing a snippet of text with a heavier font-weight.</strong></p>
+        <p><em>em - for emphasizing a snippet of text with italics.</em></p>
+        <p>
+            Sed ullamcorper, felis eu aliquet fermentum, est eros aliquam sapien, non tristique elit nibh vitae
+            nulla. Maecenas augue felis, elementum porttitor pulvinar vitae, molestie sed ante. Nunc felis elit,
+            scelerisque eget sagittis ac, convallis in mi. Integer in tellus in erat porttitor facilisis. Interdum
+            et malesuada fames ac ante ipsum primis in faucibus. Maecenas at pellentesque mauris, in scelerisque
+            nulla. Proin efficitur neque ac lectus viverra, et rutrum neque facilisis. Quisque mattis nisi in quam
+            tempus porttitor. Mauris quis velit nisi. Nulla ac metus ligula. Etiam sit amet sagittis elit. Etiam sit
+            amet tristique augue, in consequat ante.
+        </p>
+        <p>Some <sub>subscript</sub> and some <sup>superscript</sup></p>
+    </section>
+    <section id="buttons-links">
+        <h2>Buttons and Links</h2>
+        <p>
+            <button class="button-primary" type="button">Primary Button</button>
+            <button class="button-primary" type="button" disabled>Primary Button (disabled)</button>
+        </p>
+        <p>
+            <button class="button-secondary" type="button">Secondary Button</button>
+            <button class="button-secondary" type="button" disabled>Secondary Button (disabled)</button>
+        </p>
+        <p>
+            Some inline <button class="button-link" type="button">button as link</button> and some
+            <button class="button-link" type="button" disabled>button as link (disabled)</button>
+        </p>
+        <p>
+            <a href="">Default link</a>
+        </p>
+    </section>
+    <section id="lists">
+        <h2>Lists</h2>
+        <h3>Unordered list</h3>
+        <ul>
+            <li>Alpha</li>
+            <li>Beta</li>
+            <li>Charlie</li>
+            <li>Delta</li>
+        </ul>
+        <h3>Ordered list</h3>
+        <ol>
+            <li>Alpha</li>
+            <li>Beta</li>
+            <li>Charlie</li>
+            <li>Delta</li>
+        </ol>
+    </section>
+    <section class="styles-section" id="forms">
+        <h2>Forms</h2>
+        <section>
+            <h3>Text input</h3>
+            <p>
+                <label for="name">Naam</label>
+                <input id="name" type="text" class="bla">
+            </p>
+            <p>
+                <label for="name-error">Naam (invalid)</label>
+                <input id="name-error" type="text" aria-invalid="true">
+            </p>
+            <p>
+                <label for="name-disabled">Naam (disabled)</label>
+                <input id="name-disabled" type="text" value="Chuck Norris" disabled>
+            </p>
+        </section>
+        <section>
+            <h3>Password input</h3>
+            <label for="password">Wachtwoord</label>
+            <input id="password" type="password">
+        </section>
+        <section>
+            <h3>Textarea</h3>
+            <p>
+                <label for="textarea">Opmerking</label>
+                <textarea id="textarea"></textarea>
+            </p>
+            <p>
+                <label for="textarea-disabled">Opmerking (disabled)</label>
+                <textarea id="textarea-disabled" disabled>Voorbeeldtekst</textarea>
+            </p>
+        </section>
+        <section>
+            <h3>Select</h3>
+            <p>
+                <label for="select">Food</label>
+                <div class="custom-select">
+                    <select id="select" name="food">
+                        <option value="cheese">Cheese</option>
+                        <option value="meat">Meat</option>
+                        <option value="pizza">Pizza</option>
+                    </select>
+                </div>
+            </p>
+            <p>
+                <label for="select-disabled">Food (disabled)</label>
+                <div class="custom-select">
+                    <select id="select-disabled" name="food">
+                        <option value="cheese">Cheese</option>
+                        <option value="meat">Meat</option>
+                        <option value="pizza">Pizza</option>
+                    </select>
+                </div>
+            </p>
+        </section>
+        <section>
+            <h3>Checkbox</h3>
+            <p>
+                <input id="checkbox" type="checkbox">
+                <label for="checkbox">Receive newsletter</label>
+            </p>
+            <p>
+                <input id="checkbox-disabled" type="checkbox" disabled>
+                <label for="checkbox-disabled">Receive newsletter (disabled)</label>
+            </p>
+            <p>
+                <input id="checkbox-disabled-checked" type="checkbox" disabled checked>
+                <label for="checkbox-disabled-checked">Receive newsletter (disabled and checked)</label>
+            </p>
+        </section>
+        <section>
+            <h3>Radiobuttons</h3>
+            <p>
+                <input id="earth" name="element" type="radio">
+                <label for="earth">Earth</label>
+            </p>
+            <p>
+                <input id="wind" name="element" type="radio">
+                <label for="wind">Wind</label>
+            </p>
+            <p>
+                <input id="fire" name="element" type="radio">
+                <label for="fire">Water</label>
+            </p>
+            <p>
+                <input id="hoolahoop" name="element" type="radio" disabled>
+                <label for="hoolahoop">Hoolahoop (disabled)</label>
+            </p>
+            <p>
+                <input id="turkey" name="element" type="radio" disabled checked>
+                <label for="turkey">Turkey (disabled and checked)</label>
+            </p>
+        </section>
+    </section>
+</section>
+{% endblock %}

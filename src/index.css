@@ -1,0 +1,8 @@
+/* import core styles */
+@import "core/styles/styles.css";
+
+/* list components alphabetically */
+@import "components/example-component/example-component.css";
+
+/* list views alphabetically */
+@import "views/checkout/checkout.css";

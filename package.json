@@ -1,0 +1,42 @@
+{
+  "name": "node-nunjucks-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for Express server with Nunjucks, PostCSS and Babel (ES6 preset)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js & npm run watch:css & npm run watch:js",
+    "build:css": "node_modules/postcss-cli/bin/postcss -u postcss-import -u postcss-custom-properties -u postcss-apply -u postcss-nested -u autoprefixer -u cssnano -o src/assets/index.css src/index.css",
+    "build:js": "browserify ./src/index.js -o ./src/assets/index.js -p [minifyify --no-map] -t [ babelify --presets [es2015] ]",
+    "watch:css": "npm run build:css -- -w",
+    "watch:js": "watchify ./src/index.js -o ./src/assets/index.js -t [ babelify --presets [es2015] ] -v"
+  },
+  "keywords": [
+    "some",
+    "keywords",
+    "here"
+  ],
+  "author": "Reinout Eppinga",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "6.5.3",
+    "babel-preset-es2015": "6.18.0",
+    "babelify": "7.3.0",
+    "cssnano": "3.9.1",
+    "express": "4.14.0",
+    "minifyify": "7.3.4",
+    "mkdirp": "0.5.1",
+    "nunjucks": "3.0.0",
+    "postcss-apply": "0.4.0",
+    "postcss-cli": "2.6.0",
+    "postcss-custom-properties": "5.0.1",
+    "postcss-import": "9.0.0",
+    "postcss-nested": "1.0.0",
+    "watchify": "3.8.0"
+  },
+  "xo": {
+    "env": [
+      "node",
+      "browser"
+    ]
+  }
+}

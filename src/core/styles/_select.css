@@ -1,0 +1,116 @@
+/* Source: https://github.com/filamentgroup/select-css/ */
+
+/* Container used for styling the custom select, the buttom class below adds the
+ * bg gradient, corners, etc. */
+.custom-select {
+    position: relative;
+    display: block;
+}
+
+/* This is the native select, we're making everything but the text invisible so
+ * we can see the button styles in the wrapper */
+.custom-select select {
+    width: 100%;
+    margin: 0;
+    outline: none;
+    padding: .6em .8em .5em .8em;
+
+    /* Prefixed box-sizing rules necessary for older browsers */
+    box-sizing: border-box;
+
+    /* Font size must be 16px to prevent iOS page zoom on focus */
+    font-size: 16px;
+}
+
+/* Custom arrow sits on top of the select - could be an image, SVG, icon font,
+ * etc. or the arrow could just baked into the bg image on the select. */
+.custom-select::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    z-index: 2;
+    /* These hacks make the select behind the arrow clickable in some browsers */
+    pointer-events: none;
+    display: none;
+}
+
+@supports ( -webkit-appearance: none ) or ( appearance: none )
+	/* Firefox <= 34 has a false positive on @supports( -moz-appearance: none )
+	 * @supports ( mask-type: alpha ) is Firefox 35+
+	 */
+	or ( ( -moz-appearance: none ) and ( mask-type: alpha ) ) {
+
+    /* Show custom arrow */
+    .custom-select::after {
+        display: block;
+    }
+
+    /* Remove select styling */
+    .custom-select select {
+        padding-right: 2em; /* Match-01 */
+        /* inside @supports so that iOS <= 8 display the native arrow */
+        background: none; /* Match-04 */
+        /* inside @supports so that Android <= 4.3 display the native arrow */
+        border: 1px solid transparent; /* Match-05 */
+        appearance: none;
+    }
+
+    .custom-select select:focus {
+        border-color: #aaa; /* Match-03 */
+    }
+}
+
+/* Apply theme */
+
+.custom-select {
+    border: 1px solid var(--grey-dark);
+    box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+    background: #f3f3f3; /* Old browsers */
+    background: #fff linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%); /* W3C */
+}
+
+.custom-select select {
+    height: var(--form-element-height);
+    font-family: var(--body-font);
+    font-weight: normal;
+    color: var(--black);
+    border-radius: 0;
+}
+
+.custom-select::after {
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 7px solid #666;
+    margin-top: -3px;
+}
+
+.custom-select {
+    border: 1px solid var(--grey-dark);
+}
+
+/* Hover style */
+.custom-select:hover {
+    border-color: var(--black);
+}
+
+/* Focus style */
+.custom-select select:focus {
+    /* It'd be nice to use -webkit-focus-ring-color here but it doesn't work on box-shadow */
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, .7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222; /* Match-02 */
+}
+
+@supports ( box-shadow: none ) {
+    .custom-select select:focus {
+        outline: none;
+    }
+}
+
+/* Set options to normal weight */
+.custom-select option {
+    font-weight: normal;
+}

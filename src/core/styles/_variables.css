@@ -1,0 +1,38 @@
+:root {
+    --green: #588e5f;
+
+    --grey-dark: #9b9da2;
+    --grey: #cbced3;
+    --grey-lighter: #e4e6eb;
+    --grey-lightest: #f4f4f4;
+
+    --blue: #7d8bab;
+    --blue-darker: #57637f;
+    --blue-darkest: #373c48;
+
+    --black: #242424;
+
+    --red: #ff0000;
+
+    --border-radius-default: 4px;
+
+    --heading-font: 'Dosis', Helvetica;
+    --body-font: 'Open Sans', sans-serif;
+
+    --margin-small: 8px;
+    --margin-default: 16px;
+    --margin-large: 32px;
+
+    --form-element-height: 2.5rem;
+
+    --sr-only: {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    };
+}

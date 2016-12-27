@@ -1,0 +1,81 @@
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Open Sans'), local('OpenSans'),
+    url('/assets/fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/open-sans-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* open-sans-700 - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Open Sans Bold'), local('OpenSans-Bold'),
+    url('/assets/fonts/open-sans-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/open-sans-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* dosis-regular - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Dosis Regular'), local('Dosis-Regular'),
+    url('/assets/fonts/dosis-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts.dosis-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* dosis-700 - latin */
+@font-face {
+    font-family: 'Dosis';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Dosis Bold'), local('Dosis-Bold'),
+    url('/assets/fonts/dosis-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts.dosis-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: 100%; /* use browser font-size setting */
+    line-height: 1.5;
+    color: var(--black);
+    font-feature-settings: "kern", "liga";
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+h1,
+.h1 {
+    font-family: var(--heading-font);
+    font-size: 2em;
+}
+
+h2,
+.h2 {
+    font-family: var(--heading-font);
+    font-size: 1.75em;
+}
+
+h3,
+.h3 {
+    font-family: var(--heading-font);
+    font-size: 1.5em;
+}
+
+h4,
+.h4 {
+    font-family: var(--heading-font);
+    font-size: 1.25em;
+}
+
+h5,
+.h5 {
+    font-family: var(--heading-font);
+    font-size: 1.125em;
+}
+
+h6,
+.h6 {
+    font-family: var(--heading-font);
+    font-size: 1em;
+}

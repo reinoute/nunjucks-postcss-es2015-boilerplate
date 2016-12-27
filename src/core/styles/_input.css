@@ -1,0 +1,84 @@
+[type="text"],
+[type="url"],
+[type="tel"],
+[type="search"],
+[type="number"],
+[type="email"],
+[type="password"] {
+    height: var(--form-element-height);
+    margin: 0; /* Remove the margin in Firefox and Safari */
+    padding: 0.5em;
+    border: 1px solid var(--grey-dark);
+    font-family: var(--body-font);
+    font-size: 1rem;
+    line-height: inherit;
+    overflow: visible; /* Show the overflow in Edge. */
+
+    &:disabled,
+    &[disabled],
+    &[readonly] {
+        background: var(--grey-lighter);
+        /* iOS fix for unreadable disabled content */
+        opacity: 1;
+    }
+
+    &[aria-invalid="true"] {
+        border-color: var(--red);
+    }
+}
+
+[type="checkbox"],
+[type="radio"] {
+    @apply --sr-only;
+
+    & + label:before {
+        content: '';
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: var(--margin-small);
+        border: 1px solid var(--grey-dark);
+        text-align : center;
+        color: var(--green);
+        vertical-align: middle;
+        transition: all 0.1s ease-in;
+    }
+
+    & + label {
+        cursor: pointer;
+        user-select: none;
+    }
+
+    &:disabled:before,
+    &[disabled]:before,
+    &:disabled + label,
+    &[disabled] + label {
+        opacity: 0.65;
+    }
+}
+
+[type="checkbox"] {
+
+    &:checked + label:before {
+        content: '✔';
+    }
+}
+
+[type="radio"] {
+
+    & + label:before {
+        border-radius: 100%;
+    }
+
+    &:checked + label:before {
+        background-color: var(--green);
+        box-shadow: inset 0px 0px 0px 2px white;
+    }
+}
+
+textarea {
+    margin: 0; /* Remove the margin in Firefox and Safari. */
+    font: inherit;
+    padding: 0.25em;
+    vertical-align: top;
+}
