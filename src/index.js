@@ -1,4 +1,4 @@
-const example = require('./components/example-component/example-component');
+import Example from './components/example-component/example-component';
 
 // initialize components
-example.enhanceAll();
+Example.enhanceAll();

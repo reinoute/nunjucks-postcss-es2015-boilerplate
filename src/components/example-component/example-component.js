@@ -24,4 +24,4 @@ function enhanceElements(elements) {
     });
 }
 
-module.exports = {enhanceAll};
+export default {enhanceAll};
