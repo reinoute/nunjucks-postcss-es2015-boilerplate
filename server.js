@@ -1,27 +1,33 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
+const path = require('path');
+const renderer = require('./lib/renderer');
 
 const app = express();
 const port = process.env.PORT || 1337;
 
-const renderer = new nunjucks.Environment(
-    new nunjucks.FileSystemLoader('.', {
-        noCache: true,
-        watch: false,
-        express: app
-    }),
-    { autoescape: true }
-);
-
-app.get('/', (req, res) => res.redirect('views/index/index.html'));
-
-app.use('/assets', express.static('src/assets'));
-
-app.get('*?', function (req, res) {
-    const filename = 'src' + req.params[0];
-    const html = renderer.render(filename, {});
+app.get('/', function (req, res) {
+    const indexFilename = `src/views/index/index.html`;
+    const html = renderer.render(indexFilename, {});
     res.send(html);
 });
+
+app.get('/:view', function (req, res) {
+    const query = req.params['view'];
+    const basename = query.replace('.html', '');
+    const pathname = `src/views/${basename}/${basename}.html`;
+    const html = renderer.render(pathname, {});
+    res.send(html);
+});
+
+app.get('/components/:name', function (req, res) {
+    const name = req.params['name'];
+    const pathname = `src/components/${name}/${name}.html`;
+    const html = renderer.render(pathname, {});
+    res.send(html);
+});
+
+app.use('/assets', express.static('dist/assets'));
 
 app.listen(port);
 
