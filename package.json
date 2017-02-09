@@ -9,9 +9,9 @@
     "build": "npm run build:css && npm run build:js && node ./scripts/build-html.js && npm run build:assets",
     "build:assets": "ncp src/assets/ dist/assets/",
     "build:css": "node_modules/postcss-cli/bin/postcss -u postcss-import -u postcss-custom-properties -u postcss-custom-media -u postcss-apply -u postcss-nested -u autoprefixer -u cssnano -o dist/assets/index.css src/index.css",
-    "build:js": "browserify ./src/index.js -o ./dist/index.js -p [minifyify --no-map] -t [ babelify --presets [es2015] ]",
+    "build:js": "browserify ./src/index.js -o ./dist/assets/index.js -p [minifyify --no-map] -t [ babelify --presets [es2015] ]",
     "watch:css": "npm run build:css -- -w",
-    "watch:js": "watchify ./src/index.js -o ./src/assets/index.js -t [ babelify --presets [es2015] ] -v"
+    "watch:js": "watchify ./src/index.js -o ./dist/assets/index.js -t [ babelify --presets [es2015] ] -v"
   },
   "keywords": [
     "some",
