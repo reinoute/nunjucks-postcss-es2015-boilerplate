@@ -1,7 +1,12 @@
 class Component {
 
     constructor(element) {
-        console.log('Navigation component initialized with element: ', element);
+        /* setup component here */
+        this.someClassMethod();
+    }
+
+    someClassMethod = () => {
+        console.log('Navigation component initialized.');
     }
 }
 
