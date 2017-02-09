@@ -2,7 +2,7 @@
 @import "core/styles/styles.css";
 
 /* list components alphabetically */
-@import "components/example-component/example-component.css";
+@import "components/navigation/navigation.css";
 
 /* list views alphabetically */
 @import "views/contact/contact.css";

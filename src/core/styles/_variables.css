@@ -23,16 +23,9 @@
     --margin-default: 16px;
     --margin-large: 32px;
 
-    --form-element-height: 2.5rem;
+    --padding-small: 8px;
+    --padding: 16px;
+    --padding-large: 32px;
 
-    --sr-only: {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        padding: 0;
-        margin: -1px;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0;
-    };
+    --form-element-height: 2.5rem;
 }

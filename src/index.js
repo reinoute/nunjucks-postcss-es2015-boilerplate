@@ -1,4 +1,6 @@
-import Example from './components/example-component/example-component';
+import Expandable from './components/expandable/expandable';
+import Navigation from './components/navigation/navigation';
 
 // initialize components
-Example.enhanceAll();
+Expandable.enhanceAll();
+Navigation.enhance();

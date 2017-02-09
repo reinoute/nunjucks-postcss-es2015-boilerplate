@@ -3,5 +3,6 @@
 @import "_buttons.css";
 @import "_input.css";
 @import "_layout.css";
+@import "_mixins.css";
 @import "_select.css";
 @import "_typography.css";
