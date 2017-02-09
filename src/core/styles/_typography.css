@@ -4,7 +4,7 @@
     font-style: normal;
     font-weight: 400;
     src: local('Open Sans'), local('OpenSans'),
-    url('/assets/fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/open-sans-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('fonts/open-sans-v13-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('fonts/open-sans-v13-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* open-sans-700 - latin */
@@ -13,7 +13,7 @@
     font-style: normal;
     font-weight: 700;
     src: local('Open Sans Bold'), local('OpenSans-Bold'),
-    url('/assets/fonts/open-sans-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts/open-sans-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('fonts/open-sans-v13-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('fonts/open-sans-v13-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* dosis-regular - latin */
@@ -22,7 +22,7 @@
     font-style: normal;
     font-weight: 400;
     src: local('Dosis Regular'), local('Dosis-Regular'),
-    url('/assets/fonts/dosis-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts.dosis-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('fonts/dosis-v6-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('fonts.dosis-v6-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 /* dosis-700 - latin */
@@ -31,7 +31,7 @@
     font-style: normal;
     font-weight: 700;
     src: local('Dosis Bold'), local('Dosis-Bold'),
-    url('/assets/fonts/dosis-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('/assets/fonts.dosis-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('fonts/dosis-v6-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */ url('fonts.dosis-v6-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 
 body {
