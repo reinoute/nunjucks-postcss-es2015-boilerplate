@@ -5,4 +5,5 @@
 @import "components/example-component/example-component.css";
 
 /* list views alphabetically */
-@import "views/checkout/checkout.css";
+@import "views/contact/contact.css";
+@import "views/index/index.css";
