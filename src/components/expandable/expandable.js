@@ -8,6 +8,8 @@ class Component {
 
         // component properties
         this.element = element;
+        this.targetId = this.element.getAttribute('aria-controls');
+        this.target = document.getElementById(this.targetId);
 
         // bind to events
         this.element.addEventListener('click', this.toggle, false);
@@ -15,11 +17,9 @@ class Component {
 
     toggle = () => {
         const isExpanded = this.element.getAttribute('aria-expanded') === 'true';
-        const targetId = this.element.getAttribute('aria-controls');
-        const target = document.getElementById(targetId);
 
         this.element.setAttribute('aria-expanded', !isExpanded);
-        isExpanded ? target.setAttribute('hidden', '') : target.removeAttribute('hidden');
+        isExpanded ? this.target.setAttribute('hidden', '') : this.target.removeAttribute('hidden');
     }
 }
 
