@@ -16,7 +16,12 @@ Boilerplate for module based development using Nunjucks templating, PostCSS and 
 
 Run `npm run build` to prepare a production build. Output is located in the `dist/` folder.
 
-## PostCSS
+
+## HTML
+
+Use [Nunjucks](https://mozilla.github.io/nunjucks/templating.htm ) for HTML templates.
+
+## CSS
 
 CSS is processed using [PostCSS](https://github.com/postcss/postcss). Next to [autoprefixing](https://github.com/postcss/autoprefixer) and compression (with [css-nano](http://cssnano.co/)) the following PostCSS plugins are used:
 
@@ -25,3 +30,9 @@ CSS is processed using [PostCSS](https://github.com/postcss/postcss). Next to [a
 * [postcss-apply](https://github.com/pascalduez/postcss-apply): custom properties sets references (mixins)
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media): custom media queries
 * [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties): variables
+
+## Javascript
+
+You can write *ES2015* style JavaScript. [Babel](https://babeljs.io/) will transform this into ES5 compatible code.
+
+* the [transform-class-properties](http://babeljs.io/docs/plugins/transform-class-properties/) plugin allows you to write public class methods.
