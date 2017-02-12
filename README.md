@@ -14,7 +14,7 @@ Boilerplate for module based development using Nunjucks templating, PostCSS and 
 
 ## Preparing production build
 
-Run `npm run build` to prepare a production build. Output is located in the `dist/` folder.
+Run `npm run build` to generate a production build. Output is located in the `dist/` folder.
 
 
 ## HTML
