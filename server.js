@@ -20,13 +20,6 @@ app.get('/:view', function (req, res) {
     res.send(html);
 });
 
-app.get('/components/:name', function (req, res) {
-    const name = req.params['name'];
-    const pathname = `src/components/${name}/${name}.html`;
-    const html = renderer.render(pathname, {});
-    res.send(html);
-});
-
 app.use('/assets', express.static('dist/assets'));
 
 app.listen(port);
