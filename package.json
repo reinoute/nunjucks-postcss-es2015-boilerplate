@@ -9,9 +9,9 @@
     "build": "npm run build:css && npm run build:js && node ./scripts/build-html.js && npm run build:assets",
     "build:assets": "ncp src/assets/ dist/assets/",
     "build:css": "node_modules/postcss-cli/bin/postcss -u postcss-import -u postcss-custom-properties -u postcss-custom-media -u postcss-apply -u postcss-nested -u autoprefixer -u cssnano -o dist/assets/index.css src/index.css",
-    "build:js": "browserify ./src/index.js -o ./dist/assets/index.js -p [minifyify --no-map] -t [ babelify --presets [es2015 stage-2]]",
+    "build:js": "browserify ./src/index.js -o ./dist/assets/index.js -p [minifyify --no-map] -t [ babelify --presets [es2015] --plugins transform-class-properties]",
     "watch:css": "npm run build:css -- -w",
-    "watch:js": "watchify ./src/index.js -o ./dist/assets/index.js -t [ babelify --presets [es2015 stage-2] ] -v"
+    "watch:js": "watchify ./src/index.js -o ./dist/assets/index.js -t [ babelify --presets [es2015] --plugins transform-class-properties] -v"
   },
   "keywords": [
     "some",
@@ -22,8 +22,8 @@
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.5.3",
+    "babel-plugin-transform-class-properties": "^6.22.0",
     "babel-preset-es2015": "^6.18.0",
-    "babel-preset-stage-2": "^6.22.0",
     "babelify": "^7.3.0",
     "bluebird": "^3.4.7",
     "cssnano": "^3.9.1",
