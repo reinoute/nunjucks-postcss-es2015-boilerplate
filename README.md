@@ -1,6 +1,6 @@
-# Nunjucks / PostCSS / ES6 boilerplate
+# Nunjucks / PostCSS / Babel (ES2015 preset) boilerplate
  
-Boilerplate for module based development using Nunjucks templating, PostCSS and ES6.
+Boilerplate for module based development using Nunjucks templating, PostCSS and Babel (ES2015 preset).
 
 ## Requirements
 
