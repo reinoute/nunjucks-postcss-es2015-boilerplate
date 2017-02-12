@@ -11,16 +11,29 @@ class Component {
         this.targetId = this.element.getAttribute('aria-controls');
         this.target = document.getElementById(this.targetId);
 
+        // set initial state
+        const isExpanded = this.element.getAttribute('aria-expanded') === 'true';
+        isExpanded ? this.expand() : this.collapse();
+
         // bind to events
         this.element.addEventListener('click', this.toggle, false);
     }
 
+    expand = () => {
+        this.element.setAttribute('aria-expanded', "true");
+        this.target.removeAttribute('hidden');
+    };
+
+    collapse = () => {
+        this.element.setAttribute('aria-expanded', "false");
+        this.target.setAttribute('hidden', '');
+    };
+
     toggle = () => {
         const isExpanded = this.element.getAttribute('aria-expanded') === 'true';
 
-        this.element.setAttribute('aria-expanded', !isExpanded);
-        isExpanded ? this.target.setAttribute('hidden', '') : this.target.removeAttribute('hidden');
-    }
+        isExpanded ? this.collapse() : this.expand();
+    };
 }
 
 const enhanceAll = () => {

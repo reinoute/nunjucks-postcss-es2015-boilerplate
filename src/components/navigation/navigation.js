@@ -2,12 +2,8 @@ class Component {
 
     constructor(element) {
         /* setup component here */
-        this.someClassMethod();
-    }
-
-    someClassMethod = () => {
         console.log('Navigation component initialized.');
-    }
+    };
 }
 
 const enhanceElement = (element) =>
