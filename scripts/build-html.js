@@ -1,7 +1,7 @@
 const Promise = require('bluebird');
 const glob = require('glob');
 const path = require('path');
-const renderer = require('../lib/renderer');
+const renderer = require('../lib/render-html');
 const saveFile = require('../lib/save-file');
 
 const srcDir = 'src/';
