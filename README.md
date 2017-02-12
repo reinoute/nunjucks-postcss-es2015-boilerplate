@@ -12,6 +12,8 @@ Boilerplate for module based development using Nunjucks templating, PostCSS and 
 1. Run `npm start` to start development server and watch for JS/CSS changes.
 1. Navigate to [localhost:1337](http://localhost:1337).
 
+Navigating to *localhost:1337/example.html* will render the view located in `src/views/example/example.html`.
+
 ## Preparing production build
 
 Run `npm run build` to generate a production build. Output is located in the `dist/` folder.

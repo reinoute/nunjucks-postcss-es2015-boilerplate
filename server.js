@@ -1,15 +1,13 @@
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
-const renderer = require('./lib/renderer');
+const renderer = require('./lib/render-html');
 
 const app = express();
 const port = process.env.PORT || 1337;
 
 app.get('/', function (req, res) {
-    const indexFilename = `src/views/index/index.html`;
-    const html = renderer.render(indexFilename, {});
-    res.send(html);
+    res.redirect('index.html');
 });
 
 app.get('/:view', function (req, res) {
