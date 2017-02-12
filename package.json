@@ -1,7 +1,7 @@
 {
-  "name": "node-nunjucks-boilerplate",
+  "name": "express-nunjucks-postcss-es2015-boilerplate",
   "version": "1.0.0",
-  "description": "Boilerplate for Express server with Nunjucks, PostCSS and Babel (ES6 preset)",
+  "description": "Boilerplate for Express server with Nunjucks templating, PostCSS and Babel (ES2015 preset)",
   "main": "index.js",
   "scripts": {
     "start": "node server.js & npm run watch:css & npm run watch:js",
